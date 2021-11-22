@@ -18,7 +18,9 @@ finger_unity_pub = None
 fingerNames = [ "thumb", "index", "middle", "ring", "pinky" ]
 open=True
 twist = Twist()
-
+# 大拇指控制抓取
+# 食指、中指、无名指分别控制末端平移
+# 手掌控制
 def callBack(msg):
   global velo_unity_pub,twist,open
 
