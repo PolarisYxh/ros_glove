@@ -2,11 +2,12 @@
 <launch>
 
   <arg name="hostname" default="192.168.3.141"/>
-  <arg name="hostport" default="10086"/>
+  <arg name="hostport" default="10085"/>
 
   <node name="primeii_ros_bridge" pkg="primeii_ros_bridge" type="primeii_ros_bridge.py"  output="screen">
     <param name="hostname" value="$(arg hostname)"/>
 	  <param name="hostport" value="$(arg hostport)" />
   </node>
-
+  <node name="prime_kinova_control" pkg="prime_kinova_control" type="unity_prime_kinova_control.py"  output="screen">
+  </node>
 </launch>
